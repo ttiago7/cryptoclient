@@ -1,0 +1,48 @@
+{
+	"name": "cryptoclient",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "react-scripts start",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ttiago7/cryptoclient.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ttiago7/cryptoclient/issues"
+	},
+	"dependencies": {
+		"axios": "^0.21.1",
+		"bootstrap": "^4.6.0",
+		"chart.js": "^3.2.1",
+		"ducks": "^0.10.2",
+		"moment": "^2.29.1",
+		"react": "^17.0.2",
+		"react-bootstrap": "^1.5.2",
+		"react-chartjs-2": "^3.0.3",
+		"react-hook-form": "^7.4.0",
+		"react-redux": "^7.2.4",
+		"react-router-dom": "^5.2.0",
+		"react-scripts": "^3.4.4",
+		"redux": "^4.1.0",
+		"redux-thunk": "^2.3.0",
+		"sweetalert2": "^10.16.6"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
