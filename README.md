@@ -64,10 +64,7 @@ Instructions on setting up this project locally. To get a local copy up and runn
 
 ### Installation
 
-1. Run the backend, in this repo you find the simple steps to up the Api rest
-   ```sh
-   git clone https://github.com/ttiago7/crypto.git
-   ```
+1. Run the backend, in this <a href="https://github.com/ttiago7/crypto">repo</a> you find the simple steps to up the Api rest
 2. Clone the repo
    ```sh
    git clone https://github.com/ttiago7/cryptoclient.git
