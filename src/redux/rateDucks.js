@@ -26,6 +26,7 @@ export const postRate = (newRate) => async (dispatch, getState) => {
 			showConfirmButton: false,
 			timer: 1000,
 		});
+		return res;
 	} catch (error) {
 		console.log('Error: ' + error);
 	}
@@ -75,15 +76,14 @@ export default function rateReducer(state = dataInicial, action) {
 				ratesQuantity: action.payload,
 			};
 		case POST_RATE:
-			const rates = state.rates;
-			console.log(rates);
+			console.log(state.rates);
 			let newRate = action.payload;
-			let index = rates.findIndex(
-				(x) => x.id_currency == newRate.id_currency
+			let index = state.rates.findIndex(
+				(x) => x.id_currency === newRate.id_currency
 			); // posicion del items a modificar
 
-			rates[index] = {
-				...rates[index],
+			state.rates[index] = {
+				...state.rates[index],
 				id: newRate.id,
 				value: newRate.value,
 				created_at: newRate.createdAt,
@@ -91,7 +91,7 @@ export default function rateReducer(state = dataInicial, action) {
 
 			return {
 				...state,
-				rates: rates,
+				rates: state.rates,
 			};
 		default:
 			return state;

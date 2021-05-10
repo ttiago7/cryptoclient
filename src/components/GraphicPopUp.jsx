@@ -7,6 +7,7 @@ import { getLastRatesQuantity } from '../redux/rateDucks';
 import moment from 'moment';
 
 const GraphicPopUp = (props) => {
+	console.log('3 - graphic pop up component');
 	const dispatch = useDispatch();
 
 	const rates = useSelector((store) => store.rate.ratesQuantity);

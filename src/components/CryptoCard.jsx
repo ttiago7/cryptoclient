@@ -11,13 +11,16 @@ import ethereum from '../images/ethereum.jpg';
 import cardano from '../images/cardano.jpg';
 import monedas from '../images/monedas.jpg';
 
-export default function CryptoCard({ rate }) {
-	//const dispatch = useDispatch();
+import { getLastRates } from '../redux/rateDucks.js';
 
-	var [login, setLogin] = useState(false);
+export default function CryptoCard({ rate }) {
+	const dispatch = useDispatch();
+	console.log('2 - crypto card component');
+
+	var [graphic, setGraphic] = useState(false);
 	var [quantit, setQuantit] = useState(0);
-	const changeStateLogin = (q) => {
-		setLogin(true);
+	const graphicPopUp = (q) => {
+		setGraphic(true);
 		setQuantit(q);
 	};
 
@@ -25,6 +28,11 @@ export default function CryptoCard({ rate }) {
 	const changeStateUpgrade = () => {
 		setUpgrade(true);
 	};
+
+	useEffect(() => {
+		console.log('llamando nuevamente ' + upgrade);
+		dispatch(getLastRates());
+	}, [upgrade]);
 
 	const switchImg = () => {
 		switch (rate.description) {
@@ -75,7 +83,7 @@ export default function CryptoCard({ rate }) {
 								<Button
 									id='c'
 									onClick={() => {
-										changeStateLogin(5);
+										graphicPopUp(5);
 									}}
 									variant='link'
 								>
@@ -88,7 +96,7 @@ export default function CryptoCard({ rate }) {
 								<Button
 									id='t'
 									onClick={() => {
-										changeStateLogin(30);
+										graphicPopUp(30);
 									}}
 									variant='link'
 								>
@@ -96,9 +104,9 @@ export default function CryptoCard({ rate }) {
 								</Button>
 							</Card.Link>
 						</ListGroupItem>
-						{login ? (
+						{graphic ? (
 							<GraphicPopUp
-								onChange={setLogin}
+								onChange={setGraphic}
 								idCurrency={rate.id_currency}
 								quantity={quantit}
 								symbol={rate.symbol}

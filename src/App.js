@@ -5,6 +5,7 @@ import generateStore from './redux/store.js';
 
 import navbar from './components/navbar.jsx';
 import CryptoScreen from './containers/CryptoScreen';
+import FormNewCurrency from './components/FormNewCurrency.jsx';
 
 export var store = null; // exporto el store para poder usarlo en util.js para dispatch action
 function App() {
@@ -17,7 +18,8 @@ function App() {
 				<div className='App'>
 					{/* <Switch> */}
 					<Route path='/' component={navbar} />
-					<Route path='/' component={CryptoScreen} />
+					<Route path='/' exact component={CryptoScreen} />
+					<Route path='/new' component={FormNewCurrency} />
 				</div>
 			</Router>
 		</Provider>

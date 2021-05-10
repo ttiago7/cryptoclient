@@ -1,18 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 
 export default function navbar() {
-	//const dispatch = useDispatch();
-
 	return (
 		<>
 			<Navbar bg='primary' variant='dark'>
-				<Navbar.Brand href='#home'>Home</Navbar.Brand>
+				<Navbar.Brand href='/'>Home</Navbar.Brand>
 				<Nav className='mr-auto'>
-					<Nav.Link href='#features'>Create currency</Nav.Link>
-					<Nav.Link href='#pricing'>Create rate</Nav.Link>
+					<Nav.Link href='http://localhost:3000/new'>
+						Create currency
+					</Nav.Link>
 				</Nav>
 				{/* <Form inline>
 					<FormControl

@@ -3,10 +3,11 @@ import Swal from 'sweetalert2';
 import { Form, Button, Modal } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Line } from 'react-chartjs-2';
-import { postRate } from '../redux/rateDucks';
+import { postRate, getLastRates } from '../redux/rateDucks';
 import { useForm } from 'react-hook-form';
 
 const RatePopUp = (props) => {
+	console.log('4 - rate pop up component');
 	const dispatch = useDispatch();
 
 	const [show, setShow] = useState(true);
@@ -24,9 +25,11 @@ const RatePopUp = (props) => {
 
 	const onSubmit = (data, e) => {
 		data.id_currency = props.idCurrency;
-		dispatch(postRate(data));
+		dispatch(postRate(data)).then((res) => {
+			console.log(res);
+			close();
+		});
 		e.target.reset(); // reset after form submit
-		close();
 	};
 
 	return (

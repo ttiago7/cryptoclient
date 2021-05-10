@@ -10,6 +10,7 @@ export default function CryptoScreen() {
 
 	const ra = useSelector((store) => store.rate.rates); //devuelve el store, uso categorys x q asi lo llame en el store, .array nos trae el array q tenemos dentro
 
+	console.log('1 - crypto screen container');
 	useEffect(() => {
 		dispatch(getLastRates());
 	}, []);
