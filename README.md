@@ -84,10 +84,7 @@ Instructions on setting up this project locally. To get a local copy up and runn
 3. Update rate of a existing crypto
 <img src="/images/5.JPG" alt="30 last rates"/>
 4. View graphics of a last rates evolution
-<div class="row">
-  <img src="/images/2.JPG" alt="5 last rates"/>
-  <img src="/images/3.JPG" alt="30 last rates"/>
-</div>
+<img src="/images/23.JPG" alt="5 last rates"/>
 
 <!-- CONTACT -->
 ## Contact
