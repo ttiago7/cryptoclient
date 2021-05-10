@@ -64,7 +64,7 @@ Instructions on setting up this project locally. To get a local copy up and runn
 
 ### Installation
 
-1. Run the backend, in this <a href="https://github.com/ttiago7/crypto" target="_blank">repo</a> you find the simple steps to up the Api rest
+1. Run the backend, in this <a href="https://github.com/ttiago7/crypto">repo</a> you find the simple steps to up the Api rest
 2. Clone the repo
    ```sh
    git clone https://github.com/ttiago7/cryptoclient.git
@@ -85,8 +85,8 @@ Instructions on setting up this project locally. To get a local copy up and runn
 <img src="/images/5.JPG" alt="30 last rates"/>
 4. View graphics of a last rates evolution
 <div class="row">
-  <img src="/images/2.JPG" alt="5 last rates" width="475" />
-  <img src="/images/3.JPG" alt="30 last rates" width="475" />
+  <img src="/images/2.JPG" alt="5 last rates" width="470" />
+  <img src="/images/3.JPG" alt="30 last rates" width="470" />
 </div>
 
 <!-- CONTACT -->
